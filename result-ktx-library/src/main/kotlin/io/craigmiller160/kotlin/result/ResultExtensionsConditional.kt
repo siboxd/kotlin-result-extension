@@ -8,7 +8,7 @@ package io.craigmiller160.kotlin.result
  * and [predicate] applied to the encapsulated value returns `false`.
  * 3) Returns the original encapsulated [Throwable] exception if it is [failure][Result.isFailure].
  *
- * Note, that this function rethrows any [Throwable] exception thrown by [transform] and [predicate]
+ * Note that this function rethrows any [Throwable] exception thrown by [transform] and [predicate]
  * functions.
  * See [mapCatchingIf] for an alternative that encapsulates exceptions.
  */
@@ -49,7 +49,7 @@ inline fun <R, T : R> Result<T>.mapCatchingIf(
  * returns `false`.
  * 3) Returns the original encapsulated value if it is [success][Result.isSuccess].
  *
- * Note, that this function rethrows any [Throwable] exception thrown by [transform] and [predicate]
+ * Note that this function rethrows any [Throwable] exception thrown by [transform] and [predicate]
  * functions.
  * See [recoverCatchingIf] for an alternative that encapsulates exceptions.
  */
@@ -100,7 +100,7 @@ inline fun <R, T : R> Result<T>.recoverCatchingIf(
  * and [predicate] applied to the encapsulated value returns `false`.
  * 3) Returns the original encapsulated [Throwable] exception if it is [failure][Result.isFailure].
  *
- * Note, that this function rethrows any [Throwable] exception thrown by [transform] or [predicate]
+ * Note that this function rethrows any [Throwable] exception thrown by [transform] or [predicate]
  * functions.
  * See [flatMapCatchingIf] for an alternative that encapsulates exceptions.
  */
@@ -141,7 +141,7 @@ inline fun <R, T : R> Result<T>.flatMapCatchingIf(
  * returns `false`.
  * 3) Returns the original encapsulated value if it is [success][Result.isSuccess].
  *
- * Note, that this function rethrows any [Throwable] exception thrown by [transform] and [predicate]
+ * Note that this function rethrows any [Throwable] exception thrown by [transform] and [predicate]
  * functions.
  * See [flatRecoverCatchingIf] for an alternative that encapsulates exceptions.
  */

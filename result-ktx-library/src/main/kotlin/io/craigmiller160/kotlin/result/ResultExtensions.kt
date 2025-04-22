@@ -5,7 +5,7 @@ package io.craigmiller160.kotlin.result
  * if this instance represents [success][Result.isSuccess] or the
  * original encapsulated [Throwable] exception if it is [failure][Result.isFailure].
  *
- * Note, that this function rethrows any [Throwable] exception thrown by [transform] function.
+ * Note that this function rethrows any [Throwable] exception thrown by [transform] function.
  * See [flatMapCatching] for an alternative that encapsulates exceptions.
  */
 inline fun <R, T> Result<T>.flatMap(transform: (value: T) -> Result<R>): Result<R> = fold(
@@ -33,7 +33,7 @@ inline fun <R, T> Result<T>.flatMapCatching(transform: (value: T) -> Result<R>):
  * if this instance represents [failure][Result.isFailure] or the
  * original encapsulated value if it is [success][Result.isSuccess].
  *
- * Note, that this function rethrows any [Throwable] exception thrown by [transform] function.
+ * Note that this function rethrows any [Throwable] exception thrown by [transform] function.
  * See [flatRecoverCatching] for an alternative that encapsulates exceptions.
  */
 inline fun <R, T : R> Result<T>.flatRecover(transform: (exception: Throwable) -> Result<R>): Result<R> =
