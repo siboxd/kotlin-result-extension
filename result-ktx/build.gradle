@@ -1,9 +1,7 @@
 plugins {
-    id 'java-library'
-    id 'org.jetbrains.kotlin.jvm' version "$kotlinVersion"
+    id("java-library")
+    id("org.jetbrains.kotlin.jvm")
 }
-
-apply from: "../upload_maven.gradle"
 
 java {
     toolchain {
@@ -16,7 +14,7 @@ java {
 repositories {
     google()
     mavenCentral()
-    maven { url 'https://jitpack.io' }
+    maven { url = "https://jitpack.io" }
 }
 
 dependencies {
